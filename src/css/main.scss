@@ -1,0 +1,52 @@
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+@import "../../node_modules/bootstrap/scss/_mixins";
+
+//$primary:   #0047ab; 
+$secondary: #ff5112;
+$teal:        #01D1D0;
+$ivoryWhite:   #fffff9;
+$fluroLime: #ddff00;
+$electricBlue:  #2a9fd6;
+$cobaltBlue:    #0047ab;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "teal":       $teal,
+  "ivoryWhite":      $white,
+  "fluroLime":  $fluroLime,
+  "electricBlue": $electricBlue,
+  "cobaltBlue":   $cobaltBlue,
+  "gray-light": $gray-100,
+  "gray":       $gray-400,
+  "gray-dark":  $gray-800,
+);
+
+.App-logo {
+  width: 20%;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
