@@ -4,6 +4,7 @@ import Coin from './components/Coin/Coin.jsx';
 import logo from "./logo.svg";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import * as Svg from "./Svg.js";
+import AccountBalance from "./components/AccountBalance/AccountBalance.jsx"
 
 var toggleOn = "toggleOn";
 
@@ -14,16 +15,16 @@ function App() {
         <img src={logo} alt="React Logo" className="App-logo text-secondary" />
         <h1 className="h1 fw-bold">
           Coin Exchange YOLO
-          <br></br>
-          <div>
-          <Svg.toggleOn id="themeToggleSwitch" width={"0.9em"} height={"0.9em"} strokeWidth={"20%"} className="text-gray" />
-          <Svg.toggleOff id="themeToggleSwitch" width={"0.9em"} height={"0.9em"} strokeWidth={"20%"} className="text-secondary" />
-          </div>
         </h1>
+        <div className="px-4">
+          <Svg.toggleOn id="themeToggleSwitch" width={"1.9rem"} height={"1.9rem"} strokeWidth={"100%"} className="text-gray" />
+          <Svg.toggleOff id="themeToggleSwitch" width={"1.9rem"} height={"1.9rem"} strokeWidth={"100%"} className="text-secondary" />
+        </div>
         </header>
+        <AccountBalance amount={10000} myClass="text-light d-flex flex-row justify-content-center fs-1" />
         <br></br>
-        <div className="container d-flex border rounded px-0 m-5">
-        <table className="table mb-0">
+        <div className="container d-flex px-0 m-5">
+        <table className="table rounded mb-0">
         <thead className="">
             <tr className="pt-3 bg-electricBlue">
               <th scope="col" className="">#</th>

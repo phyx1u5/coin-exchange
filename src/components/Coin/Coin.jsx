@@ -16,11 +16,11 @@ export default class Coin extends Component {
         // prevent the default action of submitting the form
         event.preventDefault();
 
-        const randomPercentrage = 0.995 + Math.random() * 0.01;
+        const randomPercentrage = 0.99 + Math.random() * 0.01;
 
         this.setState( function(oldState) {
             return {
-                price: oldState.price * randomPercentrage
+                price: (oldState.price * randomPercentrage).toFixed(2),
             };
         });
     }
