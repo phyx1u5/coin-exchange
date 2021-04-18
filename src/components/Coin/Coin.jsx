@@ -11,6 +11,11 @@ export default class Coin extends Component {
         }
         this.handleClick = this.handleClick.bind(this);
     }
+    // static propTypes = {
+    //     name: PropTypes.string.isRequired,
+    //     ticker: PropTypes.string.isRequired,
+    //     price: PropTypes.number.isRequired,
+    // }
 
     handleClick(event){
         // prevent the default action of submitting the form

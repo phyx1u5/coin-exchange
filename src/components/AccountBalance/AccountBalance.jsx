@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Section = styled.section`
-    border:10px solid red;
+    display: block;
 `;
 
 export default class AccountBalance extends Component {
@@ -20,6 +20,6 @@ export default class AccountBalance extends Component {
 
 
 AccountBalance.propTypes = {
-    amount: PropTypes.number.isRequired,
+    amount: PropTypes.string,
     myClass: PropTypes.string,
 }
