@@ -1,4 +1,3 @@
-//import * as React from 'react';
 import React from 'react'
 
 export const shop = (props: React.SVGProps<SVGSVGElement>) => {

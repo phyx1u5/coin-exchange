@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+// import React from 'react'
 import Coin from '../Coin/Coin.jsx';
 
+// export default CoinList
 
 export default class CoinList extends Component {
     render() {
+        const showClass = this.props.showBalance ? "" : "d-none"; 
         return (
         <div className="container d-flex flex-row justify-content-center p-5 m-auto bg-white rounded">
             <table className="table mb-0">
@@ -13,20 +16,23 @@ export default class CoinList extends Component {
                         <th scope="col">Name</th>
                         <th scope="col">Ticker</th>
                         <th scope="col">Price</th>
-                        <th scope="col"></th>
+                        <th scope="col" className={showClass} >Balance</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody className="table-warning align-middle">
                     {
                     this.props.coinData.map( 
-                        ({key, name, ticker, price}) => 
+                        ({id, name, ticker, price, balance}) => 
                             <Coin 
-                                key={key} 
+                                key={ticker} 
                                 handleRefresh={this.props.handleRefresh}
-                                id={key} 
+                                id={id} 
                                 name={name} 
                                 ticker={ticker} 
                                 price={price} 
+                                balance={balance}
+                                showBalance={this.props.showBalance}
                             />
                         )
                     }
@@ -38,7 +44,9 @@ export default class CoinList extends Component {
     }
 }
 
-// import React from 'react'
+
+
+
 
 // function CoinList() {
 //     return (

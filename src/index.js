@@ -1,6 +1,10 @@
+// import React
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import bootstrap;
+import './css/main.css';
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+// import components
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
